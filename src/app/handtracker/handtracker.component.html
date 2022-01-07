@@ -1,0 +1,52 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <video id="htvideo" #htvideo name="htvideo" class="videobox" autoplay="autoplay"></video>
+    </div>
+    <div class="col">
+      <ul class="list-unstyled">
+        <ng-container *ngFor="let src of captures; let idx = index">
+          <li *ngIf="idx === curr_index">
+            <img class="frame" [src]="src" height="50">
+          </li>
+          <li *ngIf="idx !== curr_index">
+            <img [src]="src" height="50">
+          </li>
+        </ng-container>
+      </ul>
+      <div>
+      <canvas
+          [class.show]="isCaptured"
+          [class.hide]="!isCaptured"
+          #canvas
+          id="canvas"
+          [width]="width"
+          [height]="height"
+        ></canvas>
+        <p>{{descriptions[curr_index]}}</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <button (click)="startDetection()" class="btn btn-primary btn-lg">Start</button>
+      <button (click)="stopDetection()" class="btn btn-warning btn-lg" >Stop</button>
+      
+      <progress value="0" max="3" id="progressBar"></progress>
+      <div class="text-style">{{detectedGesture}}</div>
+      <!-- <p>{{timeleft}}</p> -->
+  </div>
+  <div class="col-3">
+    <div *ngIf="!hide" class="input">
+      <p>Add Photo Description: </p>
+      <input  type="text" id="description" required
+       minlength="0" maxlength="20" size="20">
+      <p>(limit: 20 characters)</p>
+    </div>
+    
+  </div>
+  
+  </div>
+</div>

@@ -1,0 +1,54 @@
+
+.videobox{
+    border: 3px solid #0063FF;
+    border-color: #0063FF;
+    width: 600px;
+    height: 600px;
+}
+
+/* .buttonpos {
+    top: 700px;
+    right: 10px;
+    padding: 50px;
+} */
+
+.list-unstyled li {
+    display: inline-block;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.frame {
+    border: 5px solid rgb(51, 215, 119);
+  }
+
+progress {
+    margin-left: 8px;
+}
+
+#input-box {
+    background-color: rgb(76, 39, 146);
+    padding: 10px;
+    color: white;
+    border-radius: 1em/5em;
+}
+
+.input {
+    padding: 5px;
+    margin-top: calc(4 * .5rem);
+    border-radius: 4px;
+    border: 3px solid black;
+    box-shadow: .5rem .5rem 0 black;
+      
+  }
+  /* https://codepen.io/meodai/pen/rNedxBa */
+
+.text-style {
+    font-size: 40px;
+    font-weight: 200;
+}
+
+#caption {
+    font-size: 10%;
+}
+
